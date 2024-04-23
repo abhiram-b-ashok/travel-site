@@ -1,5 +1,6 @@
-import {useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import './Home.scss'
+// import MyLocation from '../Geolocation';
 import video from '../../Assets/video.mp4'
 import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
@@ -13,6 +14,11 @@ import 'aos/dist/aos.css'
 
 const Home = () => {
 
+        const [rangeValue, setRangeValue] = useState(50); // Initial value
+      
+        const handleRangeChange = (event) => {
+          setRangeValue(event.target.value);
+        };
     //for scroll animation
     useEffect(()=>
    {
@@ -20,7 +26,9 @@ const Home = () => {
    },[])
   return (
     <section className='home'>
-         <div className="overlay"></div>
+         <div className="overlay">
+            {/* <MyLocation/> */}
+         </div>
          <video src={video} muted autoPlay loop type="video/mp4" ></video>
         <div className="homeContent container">
             <div className="textDiv">
@@ -33,26 +41,20 @@ const Home = () => {
                 <div className="destinationInput">
                     <label htmlFor="city">Search your destintion:</label>
                     <div className="input flex"> 
-                    <input type="text"placeholder='Enter name here....' />
+                    <input type="text"placeholder='Enter place here....' />
                     <GrLocation className='icon' />
                     </div>
                 </div>
-                <div className="dateInput">
-                    <label htmlFor="date">Select your date:</label>
-                    <div className="input flex"> 
-                    <input type="date" />
-                    
-                    </div>
-                </div>
+
                 <div className="priceInput">
                     <div className="label_total flex">
-                    <label htmlFor="price">Max Price :</label>
-                    <h3 className='input flex'>$5000</h3>
+                    <label htmlFor="price">Select the Distance</label>
+
                     </div>
                     
                     <div className="input flex"> 
-                    <input type="range" max="5000" min="1000" />
-                   
+                    <input  type="range" max="200" min="1" value={rangeValue} onChange={handleRangeChange} />
+                    <output>{rangeValue}km</output>
                     </div>
                 </div>
                 <div className="searchOptions flex">

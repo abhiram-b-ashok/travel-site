@@ -30,10 +30,10 @@ const Footer = () => {
         <div className="footerCard flex">
           <div className="footerIntro flex">
             <div className="logoDiv">
-              <a href="yu" className='logo flex'><MdOutlineTravelExplore className='icon'/>Travel.</a>
+              <a href="yu" className='logo flex'><MdOutlineTravelExplore className='icon'/>Travelon.</a>
             </div>
             <div className="footerParagraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Travelon is bringing a new innovative provision for travel lovers especially to plan their one day tour with jusk a click to find the nearest beautiful locations and write travelogues. 
             </div>
             <div className="footerSocials">
             <AiOutlineTwitter className='icon' />
@@ -114,7 +114,7 @@ const Footer = () => {
 
           </div>
           <div className="footerDiv flex">
-            <small>Travel Website</small>
+            <small>CoderAcademy</small>
             <small>Copyrights - Abhiram B 2024</small>
           </div>
         </div>

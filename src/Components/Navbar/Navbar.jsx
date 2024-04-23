@@ -4,6 +4,28 @@ import {MdOutlineTravelExplore} from 'react-icons/md'
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 const Navbar = () => {
+
+    const [location, setLocation] = useState(null);
+
+    const handleGetLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setLocation({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            });
+          },
+          (error) => {
+            console.error('Error getting location:', error);
+          }
+        );
+      } else {
+        console.error('Geolocation is not supported by this browser.');
+      }
+    };
+  
+
    const [active,setActive]= useState('navBar');
    const showNav=()=>{
     setActive('navBar activeNavbar')
@@ -17,7 +39,7 @@ const Navbar = () => {
             <div className="logoDiv">
                 <a href="htt" className="logo flex">
                     <h1>
-                        <MdOutlineTravelExplore className="icon"/> Travel.</h1> </a>
+                        <MdOutlineTravelExplore className="icon"/> Travelon.</h1> </a>
             </div>
             <div className={active}>
                 <ul className="navLists flex">
@@ -43,10 +65,16 @@ const Navbar = () => {
                         <a href="gh" className="navLink">Contact</a>
                     </li>
 
-                        <button className="btn">
-                            <a href="er">BOOK NOW</a>
+                        <button onClick={handleGetLocation} className="btn">
+                            Get Location
                         </button>
-
+                          
+                {location && (
+                 <div>
+                Latitude: {location.latitude}, Longitude: {location.longitude}
+                 </div>
+                )}
+   
                 </ul>
                 <div onClick={removeNavbar} className="closeNavbar">
                 <AiFillCloseCircle className='icon' />
