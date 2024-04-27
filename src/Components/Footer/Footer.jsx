@@ -44,32 +44,10 @@ const Footer = () => {
           </div>
           <div className="footerLinks grid">
             <div className="linkGroup">
-              <span className="groupTitle">OUR AGENCY</span>
-              <li className="footerList flex">
-              <FiChevronRight className='icon' />
-              Services
-              </li>
-              <li className="footerList flex">
-              <FiChevronRight className='icon' />
-              Insurance
-              </li>
-              <li className="footerList flex">
-              <FiChevronRight className='icon' />
-              Agency
-              </li>
-              <li className="footerList flex">
-              <FiChevronRight className='icon' />
-              Tourism
-              </li>
-              <li className="footerList flex">
-              <FiChevronRight className='icon' />
-              Payment
-              </li>
-            </div><div className="linkGroup">
               <span className="groupTitle">PARTNERS</span>
               <li className="footerList flex">
               <FiChevronRight className='icon' />
-              Bookings
+              Booking.com
               </li>
               <li className="footerList flex">
               <FiChevronRight className='icon' />

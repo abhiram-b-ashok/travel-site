@@ -40,10 +40,10 @@ const Main = () => {
                     <span className="name"> {place.city}</span>
                     </span>
                     <div className="fees flex">
-                      <div className="grade">
-                        <span>Check<small>+1</small></span>
-                      </div>
                       <div className="price"> <h5>0</h5></div>
+                      <div className="grade">
+                        <span><small>km</small>Away</span>
+                      </div>
                     </div>
                     <div className="desc">
                       <p>{place.description}</p>
