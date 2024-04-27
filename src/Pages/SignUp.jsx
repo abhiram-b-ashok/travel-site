@@ -5,6 +5,7 @@ import video from '../Assets/video.mp4'
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { BiLogInCircle } from "react-icons/bi";
+import { MdOutlineTravelExplore } from "react-icons/md";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -33,7 +34,10 @@ Aos.init({duration:2000})
     <div className="overlay">
     </div>
     <video src={video} muted autoPlay loop type="video/mp4" ></video>
-    <div className="loginContent conatiner">
+    <div className="loginContent container">
+    <div className="logoDiv">
+              <a href="/home" className='logo flex'><MdOutlineTravelExplore className='icon'/>Travelon.</a>
+      </div>
        <div className="textDiv">
            <h1 data-aos="fade-up" className="homeTitle">Sign Up</h1>
        </div>

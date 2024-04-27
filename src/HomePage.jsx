@@ -11,7 +11,7 @@ const HomePage = () => {
     <Home/>
     <Main/>
     <Footer/>
-    </>
+  </>
   )
 }
 
