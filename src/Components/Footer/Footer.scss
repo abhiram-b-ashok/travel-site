@@ -230,7 +230,7 @@
          .secContent{
             .footerCard{
                 .footerLinks{
-                    grid-template-columns: repeat(3,1fr);
+                    grid-template-columns: repeat(2,1fr);
                     padding-bottom:1rem ;
                 }
                 .footerDiv{
@@ -280,7 +280,7 @@
             .footerCard{
                 flex-direction: row;
                 .footerLinks{
-                    grid-template-columns: repeat(3,1fr);
+                    grid-template-columns: repeat(2,1fr);
                     padding-bottom:1rem ;
                 }
                 

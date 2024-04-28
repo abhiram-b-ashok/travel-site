@@ -139,6 +139,10 @@
                     font-weight: 600p;
                     color: var(--whiteColor);
                     gap: .5rem;
+                    display: inline-flex;
+                    margin-right: 30px;
+                    margin-left: 23px;
+
 
                     .icon{
                         align-self: center;
@@ -175,6 +179,20 @@
 
         .singleDestination{
                 height: auto;
+        }
+    }
+}
+@media screen and (max-width:499px)
+{
+    .secContent{
+
+        .singleDestination{
+                
+            .cardInfo{
+                .btn{
+                    margin-left: 50px;
+                }
+            }
         }
     }
 }

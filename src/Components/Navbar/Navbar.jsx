@@ -37,15 +37,14 @@ const Navbar = () => {
     <section className='navBarSection' >
         <header className="header flex">
             <div className="logoDiv">
-                <a href="htt" className="logo flex">
+                <a href="/" className="logo flex">
                     <h1><MdOutlineTravelExplore className="icon"/> Travelon.</h1> </a>
             </div>
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                        <a href="gh" className="navLink">Home</a>
+                        <a href="home" className="navLink">Home</a>
                     </li>
-                   
                     <li className="navItem">
                         <a href="gh" className="navLink">About</a>
                     </li>

@@ -1,6 +1,8 @@
 import './Main.scss';
 import { HiOutlineLocationMarker, HiOutlineClipboardCheck } from "react-icons/hi";
+import { GrMapLocation } from "react-icons/gr";
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
@@ -20,6 +22,18 @@ const Main = () => {
       console.error('Error fetching data:', error);
     }
   };
+
+  const openGoogleMap = (latitude, longitude) => {
+    const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+    window.open(url, '_blank');
+  };
+
+  const passToView = (place) => {
+    localStorage.setItem('selectedPlace', JSON.stringify(place));
+    navigate('/view');
+  };
+
+  const navigate= useNavigate()
 
   return (
     <section className='main container section'>
@@ -42,13 +56,14 @@ const Main = () => {
                     <div className="fees flex">
                       <div className="price"> <h5>0</h5></div>
                       <div className="grade">
-                        <span><small>km</small>Away</span>
+                        <span><small>km</small></span>
                       </div>
                     </div>
                     <div className="desc">
                       <p>{place.description}</p>
                     </div>
-                    <button className='btn flex'>View<HiOutlineClipboardCheck className='icon' /> </button>
+                    <button className='btn flex' onClick={() => passToView(place)}>View<HiOutlineClipboardCheck className='icon' /> </button>
+                    <button className='btn flex' onClick={() => openGoogleMap(place.latitude, place.longitude)}>Map<GrMapLocation className='icon' /> </button>
                    </div>
                 </div>
         

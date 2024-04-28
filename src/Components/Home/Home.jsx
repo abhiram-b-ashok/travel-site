@@ -63,8 +63,6 @@ const Home = () => {
                 <div className="rightIcons">
                 <FiFacebook className='icon' />
                 <BsInstagram className='icon' />
-                <FaTripadvisor className='icon' />
-
                 </div>
                 <div className="leftIcons">
                 <BsListTask className='icon' />

@@ -33,7 +33,7 @@ const WelcomePage = () => {
     
      <animated.div style={animationProps} className="welcome-page">
      <h1 className='logos'><MdOutlineTravelExplore className="icons"/> Travelon.</h1>
-      <h1>Explore neaby with us...</h1>
+      <h2>Explore neaby with us.</h2>
       <div className="button-container">
       {!split ? (
         <button onClick={handleGetLocation}>Get Location</button>

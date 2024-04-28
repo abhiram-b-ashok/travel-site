@@ -2,10 +2,8 @@ import './Footer.scss'
 import video1 from '../../Assets/video1.mp4'
 import { FiSend } from "react-icons/fi";
 import { MdOutlineTravelExplore } from "react-icons/md";
-import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaTripadvisor } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 const Footer = () => {
   return (
@@ -36,10 +34,8 @@ const Footer = () => {
               Travelon is bringing a new innovative provision for travel lovers especially to plan their one day tour with jusk a click to find the nearest beautiful locations and write travelogues. 
             </div>
             <div className="footerSocials">
-            <AiOutlineTwitter className='icon' />
             <AiFillYoutube className='icon' />
             <AiFillInstagram className='icon' />
-            <FaTripadvisor className='icon' />
             </div>
           </div>
           <div className="footerLinks grid">
