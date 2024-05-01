@@ -88,8 +88,8 @@ const Footer = () => {
 
           </div>
           <div className="footerDiv flex">
-            <small>CoderAcademy</small>
-            <small>Copyrights - Abhiram B 2024</small>
+            <small>2024</small>
+            <small>Copyrights - Abhiram B </small>
           </div>
         </div>
       </div>
