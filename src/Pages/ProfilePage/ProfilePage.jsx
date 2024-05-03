@@ -3,7 +3,6 @@ import './ProfilePage.scss';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
-import video from '../../Assets/video.mp4'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -32,7 +31,6 @@ const ProfilePage = () => {
         <>
         <Navbar/>
         <section className="profile-page">
-        <video src={video} muted autoPlay loop type="video/mp4" ></video>
 
             <div className="overlay"></div>
             <div className="profile-content container">
@@ -59,3 +57,6 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+
+
