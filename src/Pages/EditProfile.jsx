@@ -10,14 +10,13 @@ import { useNavigate } from 'react-router-dom';
 
 // import { MdOutlineWorkOutline } from "react-icons/md";
 // import { BiDonateBlood } from "react-icons/bi";
-import { Link } from 'react-router-dom';
 
 
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
 
-const SignUp = () => {
+const EditProfile = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -57,11 +56,6 @@ const SignUp = () => {
   }, []);
 
  
-
-
-
-
-
   return (
     <section className="login">
       <div className="overlay"></div>
@@ -72,7 +66,7 @@ const SignUp = () => {
             <MdOutlineTravelExplore className="icon" />
             Travelon.
           </a>
-          <h1>Sign Up</h1>
+          <h1>Edit Profile</h1>
         </div>
        
         <div data-aos="fade-up" className="cardDiv grid">
@@ -208,15 +202,14 @@ const SignUp = () => {
               </div> */}
 
           <div onClick={handleSubmit} className=" flex searchOptions">
-            Sign up
+            Submit
             <BiLogInCircle className="icon" />
           </div>
         </div>
-        <p className="login-link">Already have an account? <Link to="/login">Login here</Link></p>
 
       </div>
     </section>
   );
 };
 
-export default SignUp;
+export default EditProfile;

@@ -48,12 +48,7 @@ const Navbar = () => {
                     <li className="navItem">
                         <a href="gh" className="navLink">About</a>
                     </li>
-                    <li className="navItem">
-                        <a href="gh" className="navLink">Pages</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="gh" className="navLink">News</a>
-                    </li>
+                   
                     <li className="navItem">
                         <a href="gh" className="navLink">Contact</a>
                     </li>
@@ -67,7 +62,12 @@ const Navbar = () => {
                 Latitude: {location.latitude}, Longitude: {location.longitude}
                  </div>
                 )}
-   
+                   <li className="navItem">
+                        <a href="/signout" className="navLink">Signout</a>
+                    </li>
+                    <li className="navItem">
+                        <a href="/login" className="navLink">Login/Signup</a>
+                    </li>
                 </ul>
                 <div onClick={removeNavbar} className="closeNavbar">
                 <AiFillCloseCircle className='icon' />

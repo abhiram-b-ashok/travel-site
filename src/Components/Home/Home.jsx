@@ -5,7 +5,6 @@ import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
 import { FiFacebook } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
-import { FaTripadvisor } from "react-icons/fa";
 import { BsListTask } from "react-icons/bs";
 import { TbApps } from "react-icons/tb";
 import Aos from 'aos'

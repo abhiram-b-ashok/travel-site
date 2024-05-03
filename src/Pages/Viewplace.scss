@@ -1,39 +1,77 @@
-.view-page {
-  .navbar {
-    position: fixed;
-    width: 100%;
-    top: 50px; /* Adjust this value to position the navbar below the top */
-    z-index: 1000;
-    background-color: #fff; /* Adjust the background color as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+:root{
+
+  --PrimaryColor: hsl(199, 100%,33%);
+  --SecondaryColor: hsl(187,85%,43%);
+  --gradientColor: linear-gradient(to right, hsl(187,85%,43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl( 240,4%, 36%);
+  --whiteColorDeam: hsl(0,0%, 93%); 
+  --greyText: rgb(190, 190,190);
+  --inputColor:rgb(239, 239, 239);
+  --bodyColor:rgb(240, 240, 246); 
+  --cardBG:rgb(225, 225, 235);
   }
 
-  .content {
-    padding-top: 60px; /* Adjust this value to create space for the navbar */
-  }
 
-  .place-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+.place-details {
+  position:relative;
+  top: 50px; 
+  transform: translateY(4%);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
-    img {
-      width: 300px;
-      height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+      max-width: 100%;
       border-radius: 10px;
-      margin-right: 20px;
-    }
+      margin-bottom: 20px;
+  }
 
-    .details {
+  .details {
       h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 10px;
       }
+
       p {
-        font-size: 18px;
-        margin-bottom: 8px;
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 10px;
       }
-    }
+
+      .location {
+          margin-top: auto;
+
+          .btn {
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                  background-color: #0056b3;
+              }
+
+              .icon {
+                  font-size: 18px;
+                  margin-left: 5px;
+              }
+          }
+      }
   }
 }
