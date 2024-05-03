@@ -7,11 +7,6 @@ import { BiLogInCircle } from 'react-icons/bi';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { MdOutlineHomeWork } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
-
-// import { MdOutlineWorkOutline } from "react-icons/md";
-// import { BiDonateBlood } from "react-icons/bi";
-
-
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
@@ -19,10 +14,7 @@ import Aos from 'aos';
 const EditProfile = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [dateOfBirth, setDateOfBirth] = useState('');
-  const [bloodGroup, setBloodGroup] = useState('');
   const [address, setAddress] = useState('');
-  const [job, setJob] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -31,18 +23,12 @@ const EditProfile = () => {
     event.preventDefault();
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
-    console.log('Date of Birth:', dateOfBirth);
-    console.log('Blood Group:', bloodGroup);
     console.log('Address:', address);
-    console.log('Job:', job);
     console.log('Email:', email);
     console.log('Password:', password);
     setFirstName('');
     setLastName('');
-    setDateOfBirth('');
-    setBloodGroup('');
     setAddress('');
-    setJob('');
     setEmail('');
     setPassword('');
     setConfirmPassword('');
@@ -80,7 +66,6 @@ const EditProfile = () => {
                 onChange={(e) => setFirstName(e.target.value)}
                 required
               />
-               {/* <MdDriveFileRenameOutline className='icon'/> */}
 
             </div>
           </div>
@@ -94,7 +79,6 @@ const EditProfile = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 required
               />
-              {/* <MdDriveFileRenameOutline className='icon'/> */}
             </div>
           </div>
 
@@ -137,19 +121,7 @@ const EditProfile = () => {
               <RiLockPasswordLine className="icon" />
             </div>
           </div>
-          {/* <div className="destinationInput">
-                  <label htmlFor="dateOfBirth">Date of Birth</label>
-                  <div className="input flex">
-               <input
-              type="date"
-              id="dateOfBirth"
-              value={dateOfBirth}
-              onChange={(e) => setDateOfBirth(e.target.value)}
-              required />
-                  </div>
-                  
-                </div> */}
-
+        
                 <div className="destinationInput">
                 <label htmlFor="address">Enter Address</label>
                 <div className="input flex">
@@ -164,42 +136,7 @@ const EditProfile = () => {
                   <MdOutlineHomeWork className='icon'/>
                 </div>
               </div>
-              {/* <div className="destinationInput">
-                <label htmlFor="job">Job</label>
-                <div className="input flex">
-                  <input
-                    type="text"
-                    id="job"
-                    placeholder="Enter Job"
-                    value={job}
-                    onChange={(e) => setJob(e.target.value)}
-                    required
-                  />
-                  <MdOutlineWorkOutline className='icon'/>
-                </div>
-              </div> */}
-
-              {/* <div className="destinationInput">
-                <label htmlFor="bloodGroup">Blood Group</label>
-                <div className="input flex">
-                  <select
-                    id="bloodGroup"
-                    value={bloodGroup}
-                    onChange={(e) => setBloodGroup(e.target.value)}
-                    required>
-                    <option value="">Select Blood Group</option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                  </select>
-                  <BiDonateBlood className='icon' />
-                </div>
-              </div> */}
+            
 
           <div onClick={handleSubmit} className=" flex searchOptions">
             Submit

@@ -3,6 +3,11 @@ import Footer from '../Components/Footer/Footer';
 import './Viewplace.scss'
 const Viewplace = () => {
     const place = JSON.parse(localStorage.getItem('selectedPlace'));
+    const openGoogleMap = (latitude, longitude) => {
+      const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+      window.open(url, '_blank');
+    };
+
 
   return (
     <>
@@ -14,6 +19,7 @@ const Viewplace = () => {
             <p>{place.description}</p>
             <p>Location: {place.city}</p>
           </div>
+          <button className='btn flex' onClick={() => openGoogleMap(place.latitude, place.longitude)}>Location </button>
         </div>
       <Footer />
    

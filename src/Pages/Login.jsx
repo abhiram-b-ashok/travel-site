@@ -54,7 +54,7 @@ Aos.init({duration:2000})
            <div className="destinationInput">
                <label htmlFor="city">Enter Email</label>
                <div className="input flex"> 
-               <input  type="email" placeholder='Enter Email'  value={email}
+               <input  type="email" placeholder='Email'  value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required />
                <MdOutlineAlternateEmail className='icon' />
@@ -64,7 +64,7 @@ Aos.init({duration:2000})
            <div className="destinationInput">
                <label htmlFor="city">Enter Password</label>
                <div className="input flex"> 
-               <input  type="password" placeholder='Enter Password' value={password}
+               <input  type="password" placeholder='**********' value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required />
                <RiLockPasswordLine className='icon' />
